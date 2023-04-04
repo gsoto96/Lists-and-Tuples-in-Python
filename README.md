@@ -1,1 +1,1039 @@
 # Lists-and-Tuples-in-Python
+{
+  "metadata": {
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    },
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Pyolite",
+      "language": "python"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": "Lists and Tuples in Python\nEstimated time needed: 30 minutes\n\nObjectives\nAfter completing this lab you will be able to:\n\nPerform list operations in Python, including indexing, list manipulation, and copy/clone list.\nPerform the basics tuple operations in Python, including indexing, slicing and sorting",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": " '1'+'2'",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 190,
+      "outputs": [
+        {
+          "execution_count": 190,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'12'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "myvar = 'hello'\nmyvar.upper()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 191,
+      "outputs": [
+        {
+          "execution_count": 191,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'HELLO'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "str(1+1)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 192,
+      "outputs": [
+        {
+          "execution_count": 192,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'2'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "\"123\".replace(\"12\", \"ab\")",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 193,
+      "outputs": [
+        {
+          "execution_count": 193,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'ab3'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "x=2/2 \ntype(x)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 194,
+      "outputs": [
+        {
+          "execution_count": 194,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "float"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "say_what=('say',' what', 'you', 'will')\nsay_what[-1]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 197,
+      "outputs": [
+        {
+          "execution_count": 197,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'will'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "A=(1,2,3,4,5)\nA[1:4]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 199,
+      "outputs": [
+        {
+          "execution_count": 199,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "(2, 3, 4)"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "A=(1,2,3,4,5)\nlen(A)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 200,
+      "outputs": [
+        {
+          "execution_count": 200,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "5"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "B=[1,2,[3,'a'],[4,'b']]\nB[3][1]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 201,
+      "outputs": [
+        {
+          "execution_count": 201,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'b'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "[1,2,3]+[1,1,1]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 202,
+      "outputs": [
+        {
+          "execution_count": 202,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "[1, 2, 3, 1, 1, 1]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "A = [1]\nA.append([2,3,4,5])\n\n# now A will be 2 since append only adds one element to the list",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 206,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "\"Hello Mike\".split()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 209,
+      "outputs": [
+        {
+          "execution_count": 209,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Hello', 'Mike']"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Create a list\n\nL = [\"Michael Jackson\", 10.1, 1982]\nL",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 210,
+      "outputs": [
+        {
+          "execution_count": 210,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Michael Jackson', 10.1, 1982]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print the elements on each index\n\nprint('the same element using negative and positive indexing:\\n Postive:',L[0],\n'\\n Negative:' , L[-3]  )\nprint('the same element using negative and positive indexing:\\n Postive:',L[1],\n'\\n Negative:' , L[-2]  )\nprint('the same element using negative and positive indexing:\\n Postive:',L[2],\n'\\n Negative:' , L[-1]  )",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 211,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "the same element using negative and positive indexing:\n Postive: Michael Jackson \n Negative: Michael Jackson\nthe same element using negative and positive indexing:\n Postive: 10.1 \n Negative: 10.1\nthe same element using negative and positive indexing:\n Postive: 1982 \n Negative: 1982\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Sample List\n\n[\"Michael Jackson\", 10.1, 1982, [1, 2], (\"A\", 1)]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 212,
+      "outputs": [
+        {
+          "execution_count": 212,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Michael Jackson', 10.1, 1982, [1, 2], ('A', 1)]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Sample List\n\nL = [\"Michael Jackson\", 10.1,1982,\"MJ\",1]\nL",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 213,
+      "outputs": [
+        {
+          "execution_count": 213,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Michael Jackson', 10.1, 1982, 'MJ', 1]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# List slicing\n\nL[3:5]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 214,
+      "outputs": [
+        {
+          "execution_count": 214,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['MJ', 1]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use extend to add elements to list\n\nL = [ \"Michael Jackson\", 10.2]\nL.extend(['pop', 10])\nL",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 215,
+      "outputs": [
+        {
+          "execution_count": 215,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Michael Jackson', 10.2, 'pop', 10]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use append to add elements to list\n\nL = [ \"Michael Jackson\", 10.2]\nL.append(['pop', 10])\nL",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 216,
+      "outputs": [
+        {
+          "execution_count": 216,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Michael Jackson', 10.2, ['pop', 10]]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use extend to add elements to list\n\nL = [ \"Michael Jackson\", 10.2]\nL.extend(['pop', 10])\nL",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 217,
+      "outputs": [
+        {
+          "execution_count": 217,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Michael Jackson', 10.2, 'pop', 10]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use append to add elements to list\n\nL.append(['a','b'])\nL",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 218,
+      "outputs": [
+        {
+          "execution_count": 218,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['Michael Jackson', 10.2, 'pop', 10, ['a', 'b']]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Change the element based on the index\n\nA = [\"disco\", 10, 1.2]\nprint('Before change:', A)\nA[0] = 'hard rock'\nprint('After change:', A)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 219,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Before change: ['disco', 10, 1.2]\nAfter change: ['hard rock', 10, 1.2]\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Delete the element based on the index\n\nprint('Before change:', A)\ndel(A[0])\nprint('After change:', A)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 220,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Before change: ['hard rock', 10, 1.2]\nAfter change: [10, 1.2]\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Split the string, default is by space\n\n'hard rock'.split()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 221,
+      "outputs": [
+        {
+          "execution_count": 221,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['hard', 'rock']"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Split the string by comma\n\n'A,B,C,D'.split(',')",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 222,
+      "outputs": [
+        {
+          "execution_count": 222,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['A', 'B', 'C', 'D']"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Copy (copy by reference) the list A\n\nA = [\"hard rock\", 10, 1.2]\nB = A\nprint('A:', A)\nprint('B:', B)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 223,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "A: ['hard rock', 10, 1.2]\nB: ['hard rock', 10, 1.2]\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Examine the copy by reference\n\nprint('B[0]:', B[0])\nA[0] = \"banana\"\nprint('B[0]:', B[0])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 224,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "B[0]: hard rock\nB[0]: banana\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Clone (clone by value) the list A\n\nB = A[:]\nB",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 225,
+      "outputs": [
+        {
+          "execution_count": 225,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['banana', 10, 1.2]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "print('B[0]:', B[0])\nA[0] = \"hard rock\"\nprint('B[0]:', B[0])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 226,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "B[0]: banana\nB[0]: banana\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Create a list a_list, with the following elements 1, hello, [1,2,3] and True.\na_list = [1, \"hello\", [1,2,3], True]\na_list",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 232,
+      "outputs": [
+        {
+          "execution_count": 232,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "[1, 'hello', [1, 2, 3], True]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Find the value stored at index 1 of a_list.\n\nprint(a_list[1])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 233,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "hello\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Retrieve the elements stored at index 1, 2 and 3 of a_list.\nprint(a_list[1:4])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 237,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "['hello', [1, 2, 3], True]\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Concatenate the following lists A = [1, 'a'] and B = [2, 1, 'd']:\nA = [1, 'a'] \nB = [2, 1, 'd']\nA+B",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 238,
+      "outputs": [
+        {
+          "execution_count": 238,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "[1, 'a', 2, 1, 'd']"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Create your first tuple\n\ntuple1 = (\"disco\",10,1.2 )\ntuple1",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 239,
+      "outputs": [
+        {
+          "execution_count": 239,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "('disco', 10, 1.2)"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print the type of the tuple you created\n\ntype(tuple1)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 240,
+      "outputs": [
+        {
+          "execution_count": 240,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "tuple"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print the variable on each index\n\nprint(tuple1[0])\nprint(tuple1[1])\nprint(tuple1[2])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 241,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "disco\n10\n1.2\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print the type of value on each index\n\nprint(type(tuple1[0]))\nprint(type(tuple1[1]))\nprint(type(tuple1[2]))",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 242,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "<class 'str'>\n<class 'int'>\n<class 'float'>\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use negative index to get the value of the last element\n\ntuple1[-1]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 243,
+      "outputs": [
+        {
+          "execution_count": 243,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "1.2"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use negative index to get the value of the second last element\n\ntuple1[-2]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 245,
+      "outputs": [
+        {
+          "execution_count": 245,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "10"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use negative index to get the value of the third last element\n\ntuple1[-3]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 244,
+      "outputs": [
+        {
+          "execution_count": 244,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'disco'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Concatenate two tuples\n\ntuple2 = tuple1 + (\"hard rock\", 10)\ntuple2",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 247,
+      "outputs": [
+        {
+          "execution_count": 247,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "('disco', 10, 1.2, 'hard rock', 10)"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Slice from index 0 to index 2\n\ntuple2[0:3]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 248,
+      "outputs": [
+        {
+          "execution_count": 248,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "('disco', 10, 1.2)"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Slice from index 3 to index 4\n\ntuple2[3:5]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 249,
+      "outputs": [
+        {
+          "execution_count": 249,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "('hard rock', 10)"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Get the length of tuple\n\nlen(tuple2)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 250,
+      "outputs": [
+        {
+          "execution_count": 250,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "5"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# A sample tuple\n\nRatings = (0, 9, 6, 5, 10, 8, 9, 6, 2)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 251,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "# Sort the tuple\n\nRatingsSorted = sorted(Ratings)\nRatingsSorted",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 252,
+      "outputs": [
+        {
+          "execution_count": 252,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "[0, 2, 5, 6, 6, 8, 9, 9, 10]"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Create a nest tuple\n\nNestedT =(1, 2, (\"pop\", \"rock\") ,(3,4),(\"disco\",(1,2)))",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 253,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print element on each index\n\nprint(\"Element 0 of Tuple: \", NestedT[0])\nprint(\"Element 1 of Tuple: \", NestedT[1])\nprint(\"Element 2 of Tuple: \", NestedT[2])\nprint(\"Element 3 of Tuple: \", NestedT[3])\nprint(\"Element 4 of Tuple: \", NestedT[4])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 254,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Element 0 of Tuple:  1\nElement 1 of Tuple:  2\nElement 2 of Tuple:  ('pop', 'rock')\nElement 3 of Tuple:  (3, 4)\nElement 4 of Tuple:  ('disco', (1, 2))\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print element on each index, including nest indexes\n\nprint(\"Element 2, 0 of Tuple: \",   NestedT[2][0])\nprint(\"Element 2, 1 of Tuple: \",   NestedT[2][1])\nprint(\"Element 3, 0 of Tuple: \",   NestedT[3][0])\nprint(\"Element 3, 1 of Tuple: \",   NestedT[3][1])\nprint(\"Element 4, 0 of Tuple: \",   NestedT[4][0])\nprint(\"Element 4, 1 of Tuple: \",   NestedT[4][1])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 255,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Element 2, 0 of Tuple:  pop\nElement 2, 1 of Tuple:  rock\nElement 3, 0 of Tuple:  3\nElement 3, 1 of Tuple:  4\nElement 4, 0 of Tuple:  disco\nElement 4, 1 of Tuple:  (1, 2)\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print the first element in the second nested tuples\n\nNestedT[2][1][0]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 256,
+      "outputs": [
+        {
+          "execution_count": 256,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'r'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print the second element in the second nested tuples\n\nNestedT[2][1][1]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 257,
+      "outputs": [
+        {
+          "execution_count": 257,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'o'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Print the first element in the second nested tuples\n\nNestedT[4][1][0]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 258,
+      "outputs": [
+        {
+          "execution_count": 258,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "1"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# sample tuple\n\ngenres_tuple = (\"pop\", \"rock\", \"soul\", \"hard rock\", \"soft rock\", \\\n                \"R&B\", \"progressive rock\", \"disco\") \ngenres_tuple",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 259,
+      "outputs": [
+        {
+          "execution_count": 259,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "('pop',\n 'rock',\n 'soul',\n 'hard rock',\n 'soft rock',\n 'R&B',\n 'progressive rock',\n 'disco')"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Find the length of the tuple, genres_tuple:\nlen(genres_tuple)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 263,
+      "outputs": [
+        {
+          "execution_count": 263,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "8"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Access the element, with respect to index 3:\ngenres_tuple[3]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 265,
+      "outputs": [
+        {
+          "execution_count": 265,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'hard rock'"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Use slicing to obtain indexes 3, 4 and 5:\ngenres_tuple[3:6]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 271,
+      "outputs": [
+        {
+          "execution_count": 271,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "('hard rock', 'soft rock', 'R&B')"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Find the first two elements of the tuple genres_tuple:\ngenres_tuple[0:2]",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 272,
+      "outputs": [
+        {
+          "execution_count": 272,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "('pop', 'rock')"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Find the first index of \"disco\":\ngenres_tuple.index(\"disco\")",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 273,
+      "outputs": [
+        {
+          "execution_count": 273,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "7"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "# Generate a sorted List from the Tuple C_tuple=(-5, 1, -3):",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 274,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "C_tuple = (-5, 1, -3)\nC_list = sorted(C_tuple)\nC_list",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 275,
+      "outputs": [
+        {
+          "execution_count": 275,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "[-5, -3, 1]"
+          },
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}
